@@ -1,0 +1,374 @@
+{% include 'header.html' %}
+{% load static %}
+
+
+        <!-- Start: Slider Section -->
+        <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
+            
+            <!-- Carousel slides -->
+            <div class="carousel-inner" >
+                <div class="item active" >
+                    <figure >
+                        <img alt="Home Slide" src="{% static 'images/1.jpg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption" >
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">Urban lifestyles,</h3>
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">creating the combination</h3>
+                            <h2 style="color:#feff6e;font-size:40px;font-width:700;text-shadow: 3px 8px  5px #151515;float:left">RURBAN!</h2>
+                            <br><br><br><br>
+                            <div class="slide-buttons hidden-sm hidden-xs" style="float:left">
+                                <a href="{% url 'about' %}" style="background-color:#075E54;border-radius:25px" class="btn btn-primary">About Us</a>
+                                <a href="{% url 'camps' %}" class="btn btn-default">Camps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item " >
+                    <figure >
+                        <img alt="Home Slide" src="{% static 'images/2.jpg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption" >
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">Urban lifestyles,</h3>
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">creating the combination</h3>
+                            <h2 style="color:#feff6e;font-size:40px;font-width:700;text-shadow: 3px 8px  5px #151515;float:left">RURBAN!</h2>
+                            <br><br><br><br>
+                            <div class="slide-buttons hidden-sm hidden-xs" style="float:left">
+                                <a href="{% url 'about' %}" style="background-color:#075E54;border-radius:25px" class="btn btn-primary">About Us</a>
+                                <a href="{% url 'camps' %}" class="btn btn-default">Camps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item " >
+                    <figure >
+                        <img alt="Home Slide" src="{% static 'images/3.jpg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption" >
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">Urban lifestyles,</h3>
+                            <h3 style="font-size:35px;font-width:300;text-shadow: 3px 8px  5px #151515;float:left">creating the combination</h3>
+                            <h2 style="color:#feff6e;font-size:40px;font-width:700;text-shadow: 3px 8px  5px #151515;float:left">RURBAN!</h2>
+                            <br><br><br><br>
+                            <div class="slide-buttons hidden-sm hidden-xs" style="float:left">
+                                <a href="{% url 'about' %}" style="background-color:#075E54;border-radius:25px" class="btn btn-primary">About Us</a>
+                                <a href="{% url 'camps' %}" class="btn btn-default">Camps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+        </div>
+        <!-- End: Slider Section -->
+        
+        <!-- Start: Search Section -->
+        <section class="search-filters">
+            <div class="container">
+                <div class="filter-box">
+                    <!-- Start: Products Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="booksmedia-detail-main">
+                        <div class="container">
+                            <div class="row">
+
+                            </div>
+                            <div class="booksmedia-detail-box">
+
+                                <div class="clearfix"></div>
+
+                                <div class="table-tabs" id="responsiveTabs">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><b class="arrow-up"></b><a data-toggle="tab" href="#sectionA">About</a></li>
+                                        <li><b class="arrow-up"></b><a data-toggle="tab" href="#sectionB">Camps</a></li>
+                                        <li><b class="arrow-up"></b><a data-toggle="tab" href="#sectionC">Anant Mandi</a></li>
+                                        <li><b class="arrow-up"></b><a data-toggle="tab" href="#sectionD">Store</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                         <div id="sectionA" class="tab-pane fade in">
+                                             <div class="books-gird" style="width:1050px">
+                                            {% for i in abo %}
+                                            {{ i.Discription|safe }}
+                                             {% endfor %}
+                                    </div>
+                                        </div>
+                                    <div id="sectionB" class="tab-pane fade in" >
+                                            <div class="books-gird" style="width:1050px">
+                                            {% for i in cam %}
+                                            {{ i.Discription|safe }}
+                                             {% endfor %}
+                                    </div>
+                                        </div>
+
+                                        <div id="sectionC" class="tab-pane fade in">
+                                            <div class="books-gird" style="width:1050px">
+                                                {% for i in ana %}
+                                            {{ i.Discription|safe }}
+                                             {% endfor %}
+                                    </div>
+                                        </div>
+                                        <div id="sectionD" class="tab-pane fade in">
+                                            <div class="books-gird" style="width:1050px">
+                                            {% for i in sto %}
+                                            {{ i.Discription|safe }}
+                                             {% endfor %}
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Products Section -->
+
+                </div>
+            </div>
+        </section>
+        <!-- End: Search Section -->
+
+    {% include 'slider_comp.html' %}
+
+
+
+        <!-- Start: News & Event -->
+        <section class="news-events section-padding banner">
+            <div class="container">
+
+
+                <!-- Start: Products Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="main-news-list">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-11 col-md-push-3">
+                                    <div class="news-list-detail">
+
+                                        <div class="related-event text-center">
+                                            <h2>NEWS</h2>
+                                            <span class="underline center"></span>
+                                            <p class="lead"></p>
+                                            <div class="owl-carousel-event">
+                                                {% for i in new %}
+                                                <div class="single-related-event" style="width:320px;height:300px">
+                                                    <figure>
+                                                        <a href="{% url 'news' %}"><img src="{{ i.image.url }}" style="height:300px" alt="Related event"></a>
+                                                    </figure>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Products Section -->
+
+                 <!-- Start: Products Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="main-news-list">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-11 col-md-push-3">
+                                    <div class="news-list-detail">
+
+                                        <div class="related-event text-center">
+                                            <h2>Events</h2>
+                                            <span class="underline center"></span>
+                                            <p class="lead"></p>
+                                            <div class="owl-carousel-event">
+                                                {% for i in eve %}
+                                                <div class="single-related-event" style="width:320px;height:300px">
+                                                    <figure>
+                                                        <a href="{% url 'events' %}"><img src="{{ i.image.url }}" style="height:300px" alt="Related event"></a>
+                                                    </figure>
+                                                </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Products Section -->
+        <!-- End: Meet Staff -->
+            </div>
+        </section>
+        <!-- End: News & Event -->
+
+
+
+          <!-- Start: Our Community Section -->
+        <section class="community-testimonial">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Testimony</h2>
+                    <span class="underline center"></span>
+                    <p class="lead"></p>
+                </div>
+                <div class="owl-carousel">
+
+                    <div class="single-testimonial-box">
+                        <div class="top-portion">
+                            <img src="{{ i.image.url }}" alt="Testimonial Image" style="height:300px;width:230px" />
+                            <div class="user-comment">
+                                <div class="arrow-left"></div>
+                                <blockquote cite="#">
+                                    {{ i.Detail }}
+                                </blockquote>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="bottom-portion">
+                            <a href="#" class="author">
+                                {{ i.name }} <small>({{ i.position }})</small>
+                            </a>
+                            <div class="social-share-links">
+                                <ul>
+                                    <li><a href="{{ i.linkedin }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ i.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ i.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="{{ i.instagram }}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End: Our Community Section -->
+        
+        <!-- Start: Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h3 class="section-title">Words From our Community</h3>
+                <span class="underline center"></span>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="row">
+                    <div class="col-md-12" data-wow-delay="0.2s">
+                        <div class="carousel slide" data-interval="false" data-ride="carousel" id="testimonials">
+                            <!-- Carousel Slides / Quotes -->
+                            <div class="carousel-inner text-center">
+                                <!-- Quote 1 -->
+                                <div class="item active" style="background: transparent;">
+                                    <figure >
+                                        <img src="images/testimonials-01.png" alt="testimonials" />
+                                        <figcaption>
+                                            <div class="client-name">Adrey Pachai</div>
+                                            <div class="designation">Student</div>
+                                        </figcaption>
+                                    </figure>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna magna, rhoncus eget commodo et, dignissim non nulla. Sed sit amet vestibulum ex. Donec dolor velit, placerat non congue ac, cursus dictum sem. Praesent hendrerit convallis metus, at mollis lectus pretium molestie. Mauris suscipit vulputate vulputate. Sed aliquam scelerisque sem, in dapibus nibh posuere id. Praesent congue mauris at velit rutrum auctor.</p>
+                                </div>
+                                <!-- Quote 2 -->
+                                <div class="item">
+                                    <figure>
+                                        <img src="images/testimonials-01.png" alt="testimonials" />
+                                        <figcaption>
+                                            <div class="client-name">Adrey Pachai</div>
+                                            <div class="designation">Student</div>
+                                        </figcaption>
+                                    </figure>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna magna, rhoncus eget commodo et, dignissim non nulla. Sed sit amet vestibulum ex. Donec dolor velit, placerat non congue ac, cursus dictum sem. Praesent hendrerit convallis metus, at mollis lectus pretium molestie. Mauris suscipit vulputate vulputate. Sed aliquam scelerisque sem, in dapibus nibh posuere id. Praesent congue mauris at velit rutrum auctor.</p>
+                                </div>
+                                <!-- Quote 3 -->
+                                <div class="item">
+                                    <figure>
+                                        <img src="images/testimonials-01.png" alt="testimonials" />
+                                        <figcaption>
+                                            <div class="client-name">Adrey Pachai</div>
+                                            <div class="designation">Student</div>
+                                        </figcaption>
+                                    </figure>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna magna, rhoncus eget commodo et, dignissim non nulla. Sed sit amet vestibulum ex. Donec dolor velit, placerat non congue ac, cursus dictum sem. Praesent hendrerit convallis metus, at mollis lectus pretium molestie. Mauris suscipit vulputate vulputate. Sed aliquam scelerisque sem, in dapibus nibh posuere id. Praesent congue mauris at velit rutrum auctor.</p>
+                                </div>
+                                <!-- Quote 4 -->
+                                <div class="item">
+                                    <figure>
+                                        <img src="images/testimonials-01.png" alt="testimonials" />
+                                        <figcaption>
+                                            <div class="client-name">Adrey Pachai</div>
+                                            <div class="designation">Student</div>
+                                        </figcaption>
+                                    </figure>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna magna, rhoncus eget commodo et, dignissim non nulla. Sed sit amet vestibulum ex. Donec dolor velit, placerat non congue ac, cursus dictum sem. Praesent hendrerit convallis metus, at mollis lectus pretium molestie. Mauris suscipit vulputate vulputate. Sed aliquam scelerisque sem, in dapibus nibh posuere id. Praesent congue mauris at velit rutrum auctor.</p>
+                                </div>
+                                <!-- Quote 5 -->
+                                <div class="item">
+                                    <figure>
+                                        <img src="images/testimonials-01.png" alt="testimonials" />
+                                        <figcaption>
+                                            <div class="client-name">Adrey Pachai</div>
+                                            <div class="designation">Student</div>
+                                        </figcaption>
+                                    </figure>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent urna magna, rhoncus eget commodo et, dignissim non nulla. Sed sit amet vestibulum ex. Donec dolor velit, placerat non congue ac, cursus dictum sem. Praesent hendrerit convallis metus, at mollis lectus pretium molestie. Mauris suscipit vulputate vulputate. Sed aliquam scelerisque sem, in dapibus nibh posuere id. Praesent congue mauris at velit rutrum auctor.</p>
+                                </div>
+                                <!-- Carousel indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+                                    <li data-target="#testimonials" data-slide-to="1"></li>
+                                    <li data-target="#testimonials" data-slide-to="2"></li>
+                                    <li data-target="#testimonials" data-slide-to="3"></li>
+                                    <li data-target="#testimonials" data-slide-to="4"></li>
+                                </ol>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End: Testimonials Section -->
+
+
+        
+
+
+                <!-- Start: Newsletter -->
+        <section class="newsletter section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="center-content">
+                            <h2 class="section-title">Subscribe to our Newsletters</h2>
+                            <span class="underline center"></span>
+                            <p class="lead"></p>
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Enter your Email!" id="newsletter" name="newsletter" type="email">
+                            <input class="form-control" value="Subscribe" type="submit">
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End: Newsletter -->
+
+{% include 'footer.html' %}

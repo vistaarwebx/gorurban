@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    {% load static %}
+
+        <!-- Meta -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+        <!-- Title -->
+        <title>..:: GoRurban ::..</title>
+
+        <!-- Favicon -->
+        <link href="{% static 'images/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Mobile Menu -->
+        <link href="{% static 'css/mmenu.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/mmenu.positioning.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{% static 'js/html5shiv.min.js' %}"></script>
+        <script src="{% static 'js/respond.min.js' %}"></script>
+
+        <![endif]-->
+    </head>
+
+    <body>
+
+
+        <!-- Start: Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div id="footer-widgets">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div id="text-2" class="widget widget_text">
+                                <h3 class="footer-widget-title">About Gorurban</h3>
+                                <span class="underline left"></span>
+                                <div class="textwidget" style="text-align:justify">
+                                    A youth movement aiming to create an understanding and sensitivity about the issues of life in the rural environment. It's an initiative to explore the highlights and shortcomings of both the Rural and Urban lifestyles, creating the combination - RURBAN
+                                </div>
+                                <address>
+                                    <div class="info">
+                                        <i class="fa fa-whatsapp"></i>
+                                        <a href="https://chat.whatsapp.com/DFIIcPaerQ64BkPAHrclNG" ><span>chat.whatsapp.com/DFIIcPaerQ64BkPAHrclNG</span></a>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-envelope"></i>
+                                        <span><a href="">info@gorurban.org</a></span>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-phone"></i>
+                                        <span><a href="">099935 55138</a></span>
+                                    </div>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="nav_menu-2" class="widget widget_nav_menu">
+                                <h3 class="footer-widget-title">Quick Links</h3>
+                                <span class="underline left"></span>
+                                <div class="menu-quick-links-container">
+                                    <ul id="menu-quick-links" class="menu">
+                                        <li><a href="{% url 'home' %}">HOME</a></li>
+                                        <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                                        <li><a href="{% url 'camps' %}">CAMPS</a></li>
+                                        <li><a href="{% url 'oppurtunities' %}">OPPORTUNITIES</a></li>
+                                        <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden-lg hidden-md hidden-xs tablet-margin-bottom"></div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="text-4" class="widget widget_text">
+                                <h3 class="footer-widget-title">Information</h3>
+                                <span class="underline left"></span>
+                                <div class="menu-quick-links-container">
+                                    <ul id="menu-quick-links" class="menu">
+                                        <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                                        <li><a href="{%  url 'terms_conditions' %}">TERMS & CONDITIONS</a></li>
+                                        <li><a href="{%  url 'privacy_policy' %}">PRIVACY POLICY</a></li>
+                                        <li><a href="{%  url 'payment_procedure' %}">PAYMENT PROCEDURE</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div class="widget twitter-widget">
+                                <h3 class="footer-widget-title">Latest Camps</h3>
+                                <span class="underline left"></span>
+                                <div id="twitter-feed">
+                                    
+                                    <ul>
+                                        {% for i in zcmap %}
+                                        <li>
+                                            
+                                            <a href="{% url 'camps_dynamics' i.id %}"><p style="margin-left:10px;font-size:16px;font-weight:700"><img src="{% static 'images/tt.png' %}" style="height: 20px;width:20px;margin-top: 2px;" >&nbsp;&nbsp {{ i.camp_name }}</p></a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+    </body>
+
+
+</html>

@@ -1,0 +1,165 @@
+{% include 'header.html' %}
+{% load static %}
+<!-- Start: Slider Section -->
+        <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
+
+            <!-- Carousel slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <figure>
+                        <img alt="Home Slide" src="{% static 'images/banne1.jpg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="carousel-caption" >
+                                    <br><br><br><br><br><br>
+                                    <h2 style="color:#fff;font-size:100px;font-width:700;text-shadow: 3px 6px  5px #151515;float:right">CAMPS</h2>
+                                    
+                                    <h3 style="font-size:22px;font-width:300;text-shadow: 3px 6px  5px #151515;float:right">Can you swallow your food while staying away from mobile and the internet?</h3>
+                                    <h3 style="font-size:22px;font-width:300;text-shadow: 3px 6px  5px #151515;float:right;margin-top: -15px;">Then you got it right. Join us for the camps and disconnect yourself to connect.</h3>
+                                    
+                                
+                                    <div class="slide-buttons hidden-sm hidden-xs" style="margin-left: 10px;">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide-buttons hidden-sm hidden-xs">
+
+                                <a href="{% url 'oppurtunities' %}" style="float: right;border-radius:25px;margin-top:500px" class="btn btn-default">JOIN Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item ">
+                    <figure>
+                        <img alt="Home Slide" src="{% static 'images/cam2.jpeg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <div class="slide-buttons hidden-sm hidden-xs">
+
+                                <a href="{% url 'oppurtunities' %}" style="float: right;border-radius:25px;margin-top:500px" class="btn btn-default">JOIN Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item ">
+                    <figure>
+                        <img alt="Home Slide" src="{% static 'images/cam3.jpeg' %}" />
+                    </figure>
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <div class="slide-buttons hidden-sm hidden-xs">
+
+                                <a href="{% url 'oppurtunities' %}" style="float: right;border-radius:25px;margin-top:500px" class="btn btn-default">JOIN Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+        </div>
+        <!-- End: Slider Section -->
+     <!-- Start: Our Community Section -->
+        <section class="community-testimonial">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Go Rurban Motive</h2>
+                    <span class="underline center"></span>
+                    <p class="lead"></p>
+                </div>
+                <div class="">
+                    <div class="single-testimonial-box">
+                        <div class="top-portion" >
+
+                            <div class="user-comment"  >
+                                <div class="arrow-left" ></div>
+                                {% for i in mo %}
+                                <blockquote cite="#" style="text-align:justify" >
+                                    {{ i.motive }}
+                                </blockquote>
+                                {% endfor %}
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End: Our Community Section -->
+
+                <div class="text-center">
+                    <h2 class="section-title" style="font-weight: 700;">CAMPS <img src="{% static 'images/tentc.png' %}" style="width:25px;height:25px;margin-top:-8px"> </h2>
+                    <span class="underline center"></span>
+                </div>
+
+<!-- Start: Blog Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="blog-main-list">
+                        <div class="container">
+                            <div class="row">
+                                <div class="blog-page grid">
+                                    {% for i in cam %}
+                                    <article>
+                                        <div class="grid-item blog-item">
+                                            <div class="post-thumbnail">
+                                                <div class="post-date-box">
+                                                    <div class="post-date">
+                                                        <a style ="height:65px;" class="date" href="#.">{{ i.no_of_days }} 
+                                                        </a>
+                                                    </div>
+                                                    <div class="post-date-month">
+                                                        <a class="month" href="#" style="font-size:20px;">Days</a>
+                                                    </div>
+                                                </div>
+                                                <a href="{% url 'camps_dynamics' i.id %}"><img alt="blog" src="{{ i.image.url }}" style="width:360px;height:250px" /></a>
+
+                                            </div>
+                                            <div class="post-detail">
+                                                <header class="entry-header">
+                                                    <div class="blog_meta_category">
+                                                        <span class="arrow-right"></span>
+                                                        <a href="#." rel="category tag">{{ i.date }}</a>,
+                                                    </div>
+                                                    <h3 class="entry-title"><a href="blog-detail.html">{{ i.camp_name }}</a></h3>
+
+                                                </header>
+                                                <div class="entry-content" style="text-align:justify">
+                                                    <p>{{ i.detail }}</p>
+                                                </div>
+                                                <footer class="entry-footer">
+                                                    <a class="btn btn-default" href="{% url 'camps_dynamics' i.id %}">See Detail</a>
+                                                </footer>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Blog Section -->
+
+
+{% include 'footer.html' %}

@@ -1,0 +1,185 @@
+{% include 'header.html' %}
+{% load static %}
+ <!-- Start: Page Banner -->
+        <section class="page-banner "style= "background-image: url({% static 'images/111.png' %})";>
+            <div class="container">
+                <div class="banner-header">
+                    <h2 style="font-size: 60px;">Contact Us</h2>
+                    <p style="color: #fff;font-size: 20px;">Have something on your mind? Yes? Express us right away :)</p>
+                    <span class="underline center"></span>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End: Page Banner -->
+        
+
+        <!-- Start: Contact Us Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="contact-main">
+                        <div class="contact-us">
+                            <div class="container">
+                                <div class="contact-location">
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                <li>Gandhi bhawan </li>
+                                                    <li>Polyechnic square</li>
+                                                    <li>Bhopal , Madhya Pradesh </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li>Gandhi bhawan </li>
+                                                    <li>Polyechnic square</li>
+                                                    <li>Bhopal , Madhya Pradesh </li>
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-map-marker" aria-hidden="true"></i> Office Address</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-fax" aria-hidden="true"></i> Mobile </span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                     <li><a href="">Mobile :+91 9039 2055 22</a></li>
+                                                    <li><a href="">Mobile :+91 9993 5551 38</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li><a href="">Mobile :+91 9039 2055 22</a></li>
+                                                    <li><a href="">Mobile :+91 9993 5551 38</a></li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-fax"  aria-hidden="true"></i> Mobile </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flipcard">
+                                        <div class="front">
+                                            <div class="top-info">
+                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
+                                            </div>
+                                            <div class="bottom-info">
+                                                <span class="top-arrow"></span>
+                                                <ul>
+                                                    <li>info@gorurban.org</li>
+                                                     <li>gorurban@outlook.com</li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="bottom-info orange-bg">
+                                                <span class="bottom-arrow"></span>
+                                                <ul>
+                                                    <li>info@gorurban.org</li>
+                                                     <li>gorurban@outlook.com</li>
+                                                </ul>
+                                            </div>
+                                            <div class="top-info dark-bg">
+                                                <span><i class="fa fa-envelope" aria-hidden="true"></i> Email Address</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="contact-area">
+                                        <div class="container">
+                                            <div class="col-md-5 col-md-offset-1 border-gray-left">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="contact-map bg-light margin-left">
+
+                                                            <div class="agile-map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.9826893854174!2d77.39407361497184!3d23.24371698484147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42a39b2c8da3%3A0x85dad420cb1f2d71!2sGandhi%20Bhawan!5e0!3m2!1sen!2sin!4v1619193360393!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 border-gray-right">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="contact-form bg-light margin-right">
+                                                            <h2>Send us a message</h2>
+                                                            <span class="underline left"></span>
+                                                            <div class="contact-fields">
+                                                                <form id="contact"  method="POST" >
+                                                                    {% csrf_token %}
+                                                                    <div class="row">
+                                                                        <div class="col-md-6 col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <input class="form-control" type="text" placeholder="First Name" required name="first-name"  value="" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <input class="form-control" type="text" placeholder="Last Name"required name="last-name"   value="" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <input class="form-control" type="email"  placeholder="Email" required name="email"  value="" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 col-sm-6">
+                                                                            <div class="form-group">
+                                                                                <input class="form-control" type="text" maxlength="10" minlength="10" onkeypress="return event.charCode >= 45 && event.charCode <= 57 && event.charCode!=47" placeholder="Phone Number" required name="phone"  value="" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group">
+                                                                                <textarea class="form-control" placeholder="Your message" required name="message" ></textarea>
+                                                                                <div class="clearfix"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12">
+                                                                            <div class="form-group form-submit">
+                                                                                <input type="submit"  value="Send Message" class="btn btn-default"  />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Contact Us Section -->
+{% include 'footer.html' %}
+

@@ -1,0 +1,155 @@
+{% include 'header.html' %}
+{% load static %}
+<script src="{% static 'zheader/js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'zheader/js/jquery.vide.min.js' %}"></script>
+	<div data-vide-bg="{% static 'zheader/video/cook' %}">
+
+		 <div class="banner-header">
+			<div class="container" style="height:700px">
+
+						<br><br><br><br>
+                     <div class="principles-grids principles-grids1">
+                        <div class="abt-btm agileits w3layouts aos-init aos-animate">
+
+
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+
+
+
+			</div>
+		</div>
+
+	</div>
+	<!-- //video header end -->
+
+   <!-- Start: Products Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="main-news-list">
+                        <div class="container">
+                            <!-- Start: Search Section -->
+                            <section class="search-filters">
+
+                            </section>
+                            <!-- End: Search Section -->
+                            <div class="row">
+                                <div class="col-md-12 col-md-push-3 news-events-list-view" >
+                                    {% for i in abo %}
+                                    <div class="news-list-box" >
+                                        <div class="single-news-list" >
+                                            <figure>
+                                                
+                                                <img src="{{ i.image1.url }}" style="width:500px;height:500px">
+                                               
+                                                
+                                            </figure>
+
+                                            <div class="content-block" style="width:66%">
+                                                <div class="member-info">
+                                                    <div class="content_meta_category">
+                                                        <span class="arrow-right"></span>
+
+                                                    </div>
+                                                    <h3 style="font-size:40px;font-weight:600px"><a href="">{{ i.heading }}</a></h3>
+
+                                                    <p style="text-align:justify">{{ i.paragraph }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for i in his %}
+                                    <div class="news-list-box">
+                                        <div class="single-news-list">
+                                            <figure>
+                                                
+                                                 <img src="{{ i.image1.url }}" style="width:500px;height:500px">
+                                                
+                                            </figure>
+                                            <div class="content-block" style="width:66%">
+                                                <div class="member-info">
+                                                    <div class="content_meta_category">
+                                                        <span class="arrow-right"></span>
+                                                    </div>
+
+                                                    <h3 style="font-size:40px;font-weight:600px"><a href="">{{ i.heading }}</a></h3>
+                                                    <p style="text-align:justify" >{{ i.paragraph }}</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% for i in obj %}
+                                    <div class="news-list-box">
+                                        <div class="single-news-list">
+                                            <figure>
+                                              
+                                                 <img src="{{ i.image1.url }}" style="width:500px;height:500px">
+                                               
+                                                 
+                                            </figure>
+                                            <div class="content-block" style="width:66%">
+                                                <div class="member-info">
+                                                    <div class="content_meta_category">
+                                                        <span class="arrow-right"></span>
+
+                                                    </div>
+
+                                                    <h3 style="font-size:40px;font-weight:600px"><a href="">{{ i.heading }}</a></h3>
+                                                    <p style="text-align:justify" >{{ i.paragraph }}</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Products Section -->
+
+<!-- Start: Meet Staff -->
+        <section class="meet-staff-box section-padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="center-content">
+                        <h2 class="section-title"> Our Team</h2>
+                        <span class="underline center"></span>
+                        <br><br><br><br>
+                    </div>
+
+                    <div class="staff-list" style="margin-left:150px">
+                        {% for i in team %}
+                        <div class="staff-member">
+                            <figure>
+                                <img style="border-radius:50%;width:200px;height:200px" src="{{ i.image1.url }}" alt="team" />
+
+                            </figure>
+
+                            <h4 style="margin-left:15px;margin-top:10px">{{ i.name }}</h4>
+                            <p style="margin-left:25px" >{{ i.designation }}</p>
+
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End: Meet Staff -->
+
+{% include 'footer.html' %}

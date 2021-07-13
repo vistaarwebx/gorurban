@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .slideim {
+  padding-top:0em;
+  width: 380px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: solid 1px white;
+}
+
+.slideim-zzcon {
+  width: 1900px;
+  font-size: 0;
+  transition: 0s ease;
+  height: 340px;
+}
+
+.slideim-zzcon:hover {
+  animation-play-state: paused;
+}
+
+.slide {
+  animation: slide 10s ease infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+
+
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<section class="slideim">
+  <div class="slideim-zzcon slide">
+    <img src="http://placeimg.com/625/225/any"/>
+    <img src="http://placeimg.com/625/225/animals"/>
+    <img src="http://placeimg.com/625/225/arch"/>
+  </div>
+</section>
+
+</body>
+</html>

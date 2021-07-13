@@ -1,0 +1,135 @@
+{% include 'header.html' %}
+{% load static %}
+ <!-- Start: Page Banner -->
+        <section class="page-banner "style= "background-image: url({% static 'images/111.png' %})";>
+            <div class="banner-header">
+                <h2 style="font-size: 60px;">Join Us</h2>
+                <span class="underline center"></span>
+                <p style="color: #fff;font-size: 20px;">Come explore yourself away from the daily routines and discover how to take the next :)</p>
+              
+
+            </div>
+        </section>
+        <!-- End: Page Banner -->
+ <!-- Start: Blog Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="blog-detail-main">
+                        <div class="container">
+                            <div class="row">
+                                <div class="blog-page">
+                                    <div class="blog-section">
+                                        <article>
+                                            <div class="blog-detail">
+
+                                                <div class="post-detail">
+                                                    <div class="post-detail-head">
+
+                                                        <div class="post-social-share">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#.">
+                                                                        <i class="fa fa-facebook"></i>
+                                                                        <span>/ Facebook</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li><a href="#."><i class="fa fa-twitter"></i> <span>/ Twitter</span></a></li>
+                                                                <li><a href="#."><i class="fa fa-instagram"></i> <span>/ Instagram</span></a></li>
+                                                                <li><a href="#."><i class="fa fa-linkedin"></i> <span>/ Linkedin</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="entry-content">
+                                                       <div class="comments-area" id="comments">
+
+                                            <div class="comment-respond" id="respond">
+                                                <h4 class="comment-reply-title" id="reply-title">Contact For Oppurtunities</h4>
+                                                <span class="underline left"></span>
+                                                <form class="comment-form"  method="post" action="">
+                                                    {% csrf_token %}
+                                                    <div class="row">
+                                                        <p class="comment-form-author input-required">
+                                                            <label>
+                                                                <span class="first-letter">First Name</span>
+                                                                <span class="second-letter">*</span>
+                                                            </label>
+
+                                                            <input required name="fname"  type="text">
+                                                        </p>
+                                                        <p class="comment-form-author input-required">
+                                                            <label>
+                                                                <span class="first-letter">Last Name</span>
+                                                                <span class="second-letter">*</span>
+                                                            </label>
+
+                                                            <input required name="lname"  type="text">
+                                                        </p>
+                                                        <p class="comment-form-author input-required">
+                                                            <label>
+                                                                <span class="first-letter">Mobile No</span>
+                                                                <span class="second-letter">*</span>
+                                                            </label>
+
+                                                            <input required name="mob" id="author" type="text">
+                                                        </p>
+                                                        <p class="comment-form-email input-required">
+                                                            <label>
+                                                                <span class="first-letter">Email</span>
+                                                                <span class="second-letter">*</span>
+                                                            </label>
+                                                            <input required name="email" id="email" type="email">
+                                                        </p>
+                                                        <p class="comment-form-subject input-required">
+                                                            <label>
+                                                                <span class="first-letter">Age</span>
+                                                            </label>
+                                                            <input  required name="age" id="subject" type="text">
+                                                        </p>
+                                                        <p class="comment-form-subject input-required">
+                                                              <select name="role">
+                                                                <option selected value="Select">Select</option>
+                                                                <option value="Volunteerb">Volunteer</option>
+                                                                <option value="Internship">Internship</option>
+                                                                <option value="Full Time">Full Time</option>
+                                                              </select>
+                                                        </p>
+
+                                                        <div class="form-group">
+                                                            <input style="margin-left:15px;width:97%" class="form-control" placeholder=" Address" id="newsletter" name="add" type="text">
+                                                        </div>
+                                                        <p class="comment-form-comment">
+                                                            <textarea name="message" id="comment" placeholder="Message"></textarea>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <p class="form-submit">
+                                                        <input value="Submit" class="submit" id="submit" name="submit" type="submit">
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                                    </div>
+                                                    <footer class="entry-footer">
+                                                        <div class="col-xs-12 col-sm-12 entry-tags">
+                                                            <strong><i class="fa fa-book" aria-hidden="true"></i> NOTE:</strong> <span><a>Our Team Will Contact You Soon</a> </span>
+                                                        </div>
+                                                    </footer>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Blog Section -->
+
+{% include 'footer.html' %}

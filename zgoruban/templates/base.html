@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    {% load static %}
+
+        <!-- Meta -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+        <!-- Title -->
+        <title>..:: GoRurban ::..</title>
+
+        <!-- Favicon -->
+        <link href="{% static 'images/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Mobile Menu -->
+        <link href="{% static 'css/mmenu.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/mmenu.positioning.css' %}" rel="stylesheet" type="text/css" />
+
+        <!-- Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{% static 'js/html5shiv.min.js' %}"></script>
+        <script src="{% static 'js/respond.min.js' %}"></script>
+
+        <![endif]-->
+    </head>
+
+    <body>
+
+      <div class="icon-barss">
+          <a href="https://www.facebook.com/gorurban/about/?ref=page_internal" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/gorurban?fbclid=IwAR3GAhCbCmP7tygXi60t6Tg7MCYW65ATDQR_2YrPKLEv5d_XVcpHgFqbW7I" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/gorurban/?fbclid=IwAR2pfUzCzu1w3hW2Wv_MUfakwefSktZevLXFXQStK_uOpST48iUkY7-2xIs" class="google"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UC97cxYPez_zIuxpH1MlQ8dg" class="linkedin"><i class="fa fa-youtube"></i></a>
+        </div>
+         <!-- Start: Header Section -->
+        <header id="header" class="navbar-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <nav class="navbar navbar-default">
+                        <div class="menu-wrap">
+                            <div class="navbar-header">
+                                <div class="navbar-brand">
+                                    <h1>
+                                        <a href="">
+                                            <img src="{% static 'images/image.png' %}" style="width:93px;height:100px" alt="LIBRARIA" />
+                                        </a>
+                                    </h1>
+                                </div>
+                            </div>
+                            <!-- Navigation -->
+                            <div class="navbar-collapse hidden-sm hidden-xs">
+                                <ul class="nav navbar-nav">
+                                        <li><a href="{% url 'home' %}">HOME</a></li>
+                                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                                        <li><a href="{% url 'camps' %}">CAMPS</a></li>
+                                        <li><a href="{% url 'oppurtunities' %}">opportunities</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" >MEDIA</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                                <li><a href="{% url 'news' %}">News</a></li>
+                                                <li><a href="{% url 'blogs' %}">Blogs</a></li>
+                                                <li><a href="{% url 'events' %}">Events</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><button style="margin-left:-40px;border-radius:25px;background-color:#075E54;margin-top:-10px">Donate Now</button></li>
+
+                                    </ul>
+
+                                <!-- Header Topbar -->
+                                <div class="header-topbar hidden-md">
+                                    <div class="topbar-links">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                                <a href="signin.html"><i style="color:#feff6e " class="fa fa-search"></i></i>Search &nbsp|</a>
+                                            </a>
+                                        {% if request.user.is_authenticated %}
+                                         <a href="{% url 'admin_index' %}"><i style="color:#feff6e" class="fa fa-user"></i>Admin  | </a>
+                                        <a href="{% url 'Logout' %}"><i style="color:#feff6e" class="fa fa-lock"></i>Logout     &nbsp </a>
+                                        {% else %}
+                                        <a href="{% url 'Login' %}"><i style="color:#feff6e" class="fa fa-lock"></i>Login     &nbsp &nbsp &nbsp</a>
+                                        {% endif %}
+
+                                    </div>
+                                </div>
+                                <!-- Header Topbar -->
+                            </div>
+
+                        </div>
+                        <div class="mobile-menu hidden-md hidden-lg">
+                        <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
+                            <div id="mobile-menu">
+                                <ul>
+                                    <li class="mobile-title">
+                                         <img src="{% static 'images/image.png' %}" style="width:15%;padding-top:10px" alt="LIBRARIA" />
+                                        <a href="#" class="close"></a>
+                                    </li>
+                                    <li><a href="{% url 'home' %}">HOME</a></li>
+                                        <li><a href="{% url 'about' %}">ABOUT</a></li>
+                                        <li><a href="{% url 'camps' %}">CAMPS</a></li>
+                                        <li><a href="{% url 'oppurtunities' %}">OPPORTUNITIES</a></li>
+                                        <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" >MEDIA</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                                                <li><a href="{% url 'news' %}">NEWS</a></li>
+                                                <li><a href="{% url 'blogs' %}">BLOGS</a></li>
+                                                <li><a href="{% url 'events' %}">EVENTS</a></li>
+                                            </ul>
+                                        </li>
+                                    {% if request.user.is_authenticated %}
+                                        <li><a href="{% url 'Logout' %}">Logout</a></li>
+
+                                    {% else %}
+                                    <li><a href="{% url 'Login' %}">Login</a></li>
+                                    {% endif %}
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        {% block body %}
+        {% endblock %}
+
+
+        <!-- Start: Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div id="footer-widgets">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div id="text-2" class="widget widget_text">
+                                <h3 class="footer-widget-title">About Gorurban</h3>
+                                <span class="underline left"></span>
+                                <div class="textwidget" style="text-align:justify">
+                                    A youth movement aiming to create an understanding and sensitivity about the issues of life in the rural environment. It's an initiative to explore the highlights and shortcomings of both the Rural and Urban lifestyles, creating the combination - RURBAN
+                                </div>
+                                <address>
+                                    <div class="info">
+                                        <i class="fa fa-whatsapp"></i>
+                                        <a href="https://chat.whatsapp.com/DFIIcPaerQ64BkPAHrclNG" ><span>chat.whatsapp.com/DFIIcPaerQ64BkPAHrclNG</span></a>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-envelope"></i>
+                                        <span><a href="">info@gorurban.org</a></span>
+                                    </div>
+                                    <div class="info">
+                                        <i class="fa fa-phone"></i>
+                                        <span><a href="">099935 55138</a></span>
+                                    </div>
+                                </address>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="nav_menu-2" class="widget widget_nav_menu">
+                                <h3 class="footer-widget-title">Quick Links</h3>
+                                <span class="underline left"></span>
+                                <div class="menu-quick-links-container">
+                                    <ul id="menu-quick-links" class="menu">
+                                        <li><a href="{% url 'home' %}">HOME</a></li>
+                                        <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                                        <li><a href="{% url 'camps' %}">CAMPS</a></li>
+                                        <li><a href="{% url 'oppurtunities' %}">OPPORTUNITIES</a></li>
+                                        <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix hidden-lg hidden-md hidden-xs tablet-margin-bottom"></div>
+                        <div class="col-md-2 col-sm-6 widget-container">
+                            <div id="text-4" class="widget widget_text">
+                                <h3 class="footer-widget-title">Information</h3>
+                                <span class="underline left"></span>
+                                <div class="menu-quick-links-container">
+                                    <ul id="menu-quick-links" class="menu">
+                                        <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                                        <li><a href="{%  url 'terms_conditions' %}">TERMS & CONDITIONS</a></li>
+                                        <li><a href="{%  url 'privacy_policy' %}">PRIVACY POLICY</a></li>
+                                        <li><a href="{%  url 'payment_procedure' %}">PAYMENT PROCEDURE</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 widget-container">
+                            <div class="widget twitter-widget">
+                                <h3 class="footer-widget-title">Latest Camps</h3>
+                                <span class="underline left"></span>
+                                <div id="twitter-feed">
+                                    
+                                    <ul>
+                                        {% for i in zcmap %}
+                                        <li>
+                                            
+                                            <a href="{% url 'camps_dynamics' i.id %}"><p style="margin-left:10px;font-size:16px;font-weight:700"><img src="{% static 'images/tt.png' %}" style="height: 20px;width:20px;margin-top: 2px;" >&nbsp;&nbsp {{ i.camp_name }}</p></a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+    </body>
+
+
+</html>

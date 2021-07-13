@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html >
+    {% load static %}
+	<head>
+    <link href="{% static 'slider/css/main.css' %}" rel="stylesheet" type="text/css" />
+
+	</head>
+	<body>
+            <div class="container">
+  <div class="timeline">
+    <div class="timeline-month" style="width:230px;height:60px;border-radius:10px;background-color:#019102;border:23804c;box-shadow: 0px 5px 9px rgb(0, 0, 0, 0.4);">
+      <p style="font-size:37px;font-weight:700;color:#fff">GALLERY</p>
+    </div>
+    <div class="timeline-section">
+      <div class="timeline-date" style="width:120px;height:60px;border-radius:10px;background-color:#883000;box-shadow: 0px 5px 9px rgb(0, 0, 0, 0.4);">
+        <p style="font-size:37px;font-weight:700">2021</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4" >
+                <div class="timeline-box" >
+                      <div class="box-title" style="">
+                          </div>
+                              <div class="box-content" >
+                                 <section class="slideim" style="height:250px">
+                               <div class="slideim-conttains slids"  >
+                                 {% for i in fi %}
+                              <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style=";height:80%"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                        <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+       <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                                 {% for i in fi2 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in fi3 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="timeline-section">
+      <div class="timeline-date" style="width:120px;height:60px;border-radius:10px;background-color:#883000;box-shadow: 0px 5px 9px rgb(0, 0, 0, 0.4);">
+       <p style="font-size:37px;font-weight:700">2020</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in fou1 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+      <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in fou2 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in fou3 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                       <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="timeline-section">
+      <div class="timeline-date" style="width:120px;height:60px;border-radius:10px;background-color:#883000;box-shadow: 0px 5px 9px rgb(0, 0, 0, 0.4);">
+        <p style="font-size:37px;font-weight:700">2019</p>
+      </div>
+      <div class="row">
+       <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                             {% for i in thre1 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+       <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in thre2 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" style="height:250px">
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in thre3 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="timeline-section">
+      <div class="timeline-date" style="width:120px;height:60px;border-radius:10px;background-color:#883000;box-shadow: 0px 5px 9px rgb(0, 0, 0, 0.4);">
+        <p style="font-size:37px;font-weight:700">2018</p>
+      </div>
+      <div class="row">
+       <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" >
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in two1 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+       <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" >
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                                 {% for i in two2 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+        <div class="col-sm-4">
+                <div class="timeline-box" >
+                      <div class="box-title">
+
+                          </div>
+                              <div class="box-content" >
+                                 <section class="slideim">
+                               <div class="slideim-conttains slids">
+                               {% for i in two3 %}
+                               <a href="{% url 'gallery' %}"><img src="{{ i.image.url }}" style="width:300px;height:250px"></a>
+                                 {% endfor %}
+                               </div>
+                              </section>
+                          </div>
+                      <div class="box-footer"  style="color:#fff">
+                        <i class="fa  text-primary" style="color:#fff" aria-hidden="true"></i>
+                      </div>
+                </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+	</body>
+
+
+</html>

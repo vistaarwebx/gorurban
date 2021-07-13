@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<link href="{% static 'gallery/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!--fonts-->
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>	
+	<!--//fonts-->
+		<link href="{% static 'gallery/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Click On Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="{% static 'gallery/js/jquery.min.js' %}"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="{% static 'gallery/js/move-top.js' %}"></script>
+		<script type="text/javascript" src="{% static 'gallery/js/easing.js' %}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smooth-scrolling -->
+
+</head>
+<body>
+{% include 'header.html' %}
+ <!-- Start: Page Banner -->
+        <section class="page-banner "style= "background-image: url({% static 'images/111.png' %})";>
+            <div class="container">
+                <div class="banner-header">
+                    <h2 style="font-size: 60px;">News</h2>
+                    <p style="color: #fff;font-size: 20px;">Check out the areas we have been working on</p>
+                    <span class="underline center"></span>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- End: Page Banner -->
+<!-- portfolio -->
+<div id="portfolio" class="portfolio">
+	<!-- Portfolio Starts Here -->
+	<div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+		<div class="container">
+			<div class="portfolio-info">
+		
+					<ul id="filters" class="clearfix">
+							<li><span class="filter active" data-filter="app card icon web webb weaa">All</span></li>
+							<li><span class="filter" data-filter="app">2017</span></li>
+							<li><span class="filter" data-filter="card">2018</span></li>
+							<li><span class="filter" data-filter="web">2019</span></li>
+							<li><span class="filter" data-filter="webb">2020</span></li>
+							<li><span class="filter" data-filter="weaa">2021</span></li>
+					</ul>
+		
+					<div id="portfoliolist">
+						{% for i in fir %}
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper" style="width:400px;height:300px">
+								<a href="{{ i.image.url }}"  class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive"  src="{{ i.image.url }}" style="height:300px"/>
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive" style="padding-top:70px" src="{% static 'gallery/images/e.png' %}" class="zoom" alt=""/>
+								</h2>
+								
+								</div></a>
+							</div>
+						</div>
+						{% endfor %}
+						{% for j in sec %}
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper" style="width:400px;height:300px">
+								<a href="{{ j.image.url }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive"  src="{{ j.image.url }}" style="height:300px" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" style="padding-top:70px" src="{% static 'gallery/images/e.png' %}" class="zoom" alt=""/></h2>
+								
+								</div></a>
+							</div>
+						</div>
+						{% endfor %}
+						{% for k in thi %}
+						<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper" style="width:400px;height:300px">
+								<a href="{{ k.image.url }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive"  src="{{ k.image.url }}" style="height:300px" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" style="padding-top:70px" src="{% static 'gallery/images/e.png' %}" class="zoom" alt=""/>
+								</h2>
+								
+								</div></a>
+							</div>
+						</div>
+						{% endfor %}
+						{% for l in fou %}
+						<div class="portfolio webb mix_all" data-cat="webb" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper" style="width:400px;height:300px">
+								<a href="{{ l.image.url }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive"   src="{{ l.image.url }}" style="height:300px" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+								<img class="img-responsive" style="padding-top:70px" src="{% static 'gallery/images/e.png' %}" class="zoom" alt=""/></h2>
+								
+								</div></a>
+							</div>
+						</div>
+						{% endfor %}
+						{% for m in fiv %}
+						<div class="portfolio weaa mix_all" data-cat="weaa" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper" style="width:400px;height:300px">
+								<a href="{{ m.image.url }}" class="b-link-stripe b-animate-go  swipebox"  title="">
+								<img class="img-responsive"   src="{{ m.image.url }}" style="height:300px" />
+								<div class="b-wrapper">
+									<h2 class="b-animate b-from-left    b-delay03 ">
+										<img class="img-responsive" style="padding-top:70px" src="{% static 'gallery/images/e.png' %}" class="zoom" alt=""/>
+									</h2>
+								</div>
+								</a>
+							</div>
+						</div>
+						{% endfor %}
+
+						<div class="clearfix"></div>
+					</div>
+		
+	</div>
+			<link rel="stylesheet" href="{% static 'gallery/css/swipebox.css' %}">
+				<script src="{% static 'gallery/js/jquery.swipebox.min.js' %}"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+				<!-- Portfolio Ends Here -->
+				<script type="text/javascript" src="{% static 'gallery/js/jquery.mixitup.min.js' %}"></script>
+					<script type="text/javascript">
+					$(function () {
+						var filterList = {
+							init: function () {
+								// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});	
+						},
+						hoverEffect: function () {
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+								},
+								function () {
+									$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+								}		
+							);				
+						}
+					};
+					// Run the show!
+						filterList.init();
+					});	
+					</script>
+	</div>
+</div>
+</div>
+<!-- //portfolio -->
+{% include 'footer.html' %}
+</body>
+</html>

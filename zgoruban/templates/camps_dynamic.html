@@ -1,0 +1,124 @@
+{% include 'header.html' %}
+{% load static %}
+
+ <!-- Start: Page Banner -->
+        <section class="page-banner "style= "background-image: url({% static 'images/111.png' %})";>
+            <div class="container">
+                <div class="banner-header">
+                    <h2 >{{ blosingle.camp_name }}  CAMP</h2>
+                    <span class="underline center"></span>
+                    <h2>{{ blosingle.no_of_days }} Days Camp</h2>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- End: Page Banner -->
+
+        <!-- Start: Blog Section -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+                    <div class="blog-detail-main">
+                        <div class="container" style="margin-top:-200px">
+
+                            <div class="row">
+                                <div class="blog-page">
+                                    <div class="blog-section">
+                                        <article>
+                                            <div class="blog-detail">
+                                                <header class="entry-header">
+                                                    <div class="blog_meta_category">
+                                                        <a href="#" style="font-size:40px;font-weight: 600px;" rel="category tag">{{ blosingle.camp_name }}</a>
+                                                    </div>
+                                                    <h2 style="font-size:16px;font-weight: 200px;" class="entry-title">{{ blosingle.detail }}</h2>
+                                                    <div class="entry-meta">
+                                                        <span><i class="fa fa-user"></i> <a href="#">Admin</a></span>
+                                                        <span><i class="fa fa-user"></i> <a href="#">{{ blosingle.date }}</a></span>
+                                                    </div>
+                                                </header>
+                                                <div class="post-thumbnail">
+                                                    <div class="post-date-box">
+                                                        <div class="post-date">
+                                                            <a class="date" href="#.">{{ blosingle.no_of_days }}</a>
+                                                        </div>
+                                                        <div class="post-date-month">
+                                                            <a class="month" href="#.">Days</a>
+                                                        </div>
+                                                    </div>
+                                                    <figure>
+                                                        <img alt="blog" src="{{ blosingle.image.url }}" />
+                                                    </figure>
+                                                </div>
+                                                <div class="post-detail">
+                                                    <div class="post-detail-head">
+
+                                                       <div class="post-social-share">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="#.">
+                                                                        <i class="fa fa-facebook"></i>
+                                                                        <span>/ Facebook</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li><a href="#."><i class="fa fa-twitter"></i> <span>/ Twitter</span></a></li>
+                                                                <li><a href="#."><i class="fa fa-instagram"></i> <span>/ Instagram</span></a></li>
+                                                                <li><a href="#."><i class="fa fa-linkedin"></i> <span>/ Linkedin</span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </div>
+                                                    <div class="entry-content">
+                                                        <p>{{ blosingle.content|safe }}</p>
+
+                                                    </div>
+                                                    <footer class="entry-footer">
+
+                                                    </footer>
+                                                </div>
+                                            </div>
+                                        </article>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- End: Blog Section -->
+<!-- Start: Meet Staff -->
+        <section class="meet-staff-box section-padding">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="center-content">
+                        <h2 class="section-title">Participants</h2>
+                        <span class="underline center"></span>
+                        <br><br><br><br>
+                    </div>
+
+                    <div class="staff-list" style="margin-left:150px">
+                        {% for i in par %}
+                        <div class="staff-member">
+                            <figure>
+                                <img style="border-radius:50%;width:200px;height:200px" src="{{ i.image1.url }}" alt="team" />
+
+                            </figure>
+
+                            <h4 style="margin-left:15px;margin-top:10px">{{ i.name }}</h4>
+                            <p style="margin-left:25px" >{{ i.designation }}</p>
+
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- End: Meet Staff -->
+{% include 'camp_dynamic_gallery_comp.html' %}
+{% include 'footer.html' %}
